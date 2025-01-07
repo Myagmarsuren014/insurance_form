@@ -55,3 +55,7 @@
 .form-label {
     @apply block text-sm font-medium leading-6 text-gray-900;
 }
+
+.table-header {
+    @apply rounded bg-[#252A47]  text-lg font-semibold text-white shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 w-full;
+}
