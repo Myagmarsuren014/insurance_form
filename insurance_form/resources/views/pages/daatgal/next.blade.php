@@ -2,12 +2,24 @@
     <div class="mx-auto max-w-7xl px-4 my-8">
         <div class="grid grid-cols-1 gap-4 sm:grid-cols-4">
             <div class="sm:col-span-3">
-                <div class="pt-4 pb-6 px-6 bg-gray-50 rounded-md"> <!-- px-6 py-4 bg-white rounded-md -->
+                {{-- Registration section --}}
+                <div class="pt-4 pb-6 px-6 bg-gray-50 rounded-md"> 
                     <div>
                         <div class="flex w-1/2 h-auto mx-auto my-8 items-center justify-center">
                             <img src="/migDaatgal.png" alt="migDaatgalLogo">
                         </div>
-                        <form class="max-w-md mx-auto">
+                        <div class="text-center my-4">
+                            <!-- Title -->
+                            <p class="text-2xl font-bold">
+                                Өмгөөлөгчийн хариуцлагын даатгал
+                            </p>
+                            <!-- Description -->
+                            <p class="text-gray-700 text-sm">
+                                хамгийн шилдэг сонголт.
+                            </p>
+                        </div>
+                         
+                        <form class="max-w-xl mx-auto">
                             <div class="grid md:grid-cols-2 md:gap-6">
                                 <div class="relative z-0 w-full mb-5 group">
                                     <input type="text" name="last_name"
@@ -54,9 +66,12 @@
                                     үнэмлэхний дугаар</label>
                             </div>
                         </form>
+
+
+                        {{-- Багцуудынх сонголт --}}
                         <h3 class="mb-5 text-2xl font-medium text-gray-900 text-center">Багц сонгох</h3>
                         <ul class="grid w-full gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-                            <li>
+                            <li class="shadow-lg">
                                 <input type="radio" id="hosting-small" name="hosting" value="hosting-small"
                                     class="hidden peer" required />
                                 <label for="hosting-small"
@@ -72,7 +87,7 @@
                                     </svg>
                                 </label>
                             </li>
-                            <li>
+                            <li class="shadow-lg">
                                 <input type="radio" id="hosting-big" name="hosting" value="hosting-big"
                                     class="hidden peer">
                                 <label for="hosting-big"
@@ -88,7 +103,7 @@
                                     </svg>
                                 </label>
                             </li>
-                            <li>
+                            <li class="shadow-lg">
                                 <input type="radio" id="hosting-large" name="hosting" value="hosting-large"
                                     class="hidden peer">
                                 <label for="hosting-large"
@@ -106,12 +121,15 @@
                             </li>
                         </ul>
 
+                        {{-- Popup modal --}}
                         <div class="flex justify-center items-center my-8">
                             <button data-modal-target="default-modal" data-modal-toggle="default-modal"
                                 class="btn-primary flex justify-center" type="button">
                                 Дэлгэрэнгүй гэрээтэй танилцах
                             </button>
                         </div>
+
+                        {{-- Баалгаажуулалт --}}
                         <div class="flex items-center justify-center my-8">
                             <input id="checked-checkbox" type="checkbox" value=""
                                 class="w-4 h-4 bg-white border-2 border-gray-300 rounded focus:outline-none checked:bg-green-500 checked:border-green-500">
@@ -123,7 +141,8 @@
                 </div>
             </div>
 
-            <div id="default-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+            {{-- Popup Modal --}}
+            <div id="default-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full backdrop-blur-sm">
                 <div class="relative p-4 w-full max-w-4xl max-h-full">
                     <!-- Modal content -->
                     <div class="relative bg-white rounded-lg shadow dark:bg-[#252A47]">
@@ -142,7 +161,7 @@
                             <div class="space-y-4 p-4">
                                 <!-- Accordion Card 1 -->
                                 <div>
-                                    <button class="w-full text-lg font-semibold bg-primary_ld text-white p-3 rounded-md text-left flex justify-between items-center" aria-expanded="false" data-accordion-target="#card1">
+                                    <button class="accord-btn" aria-expanded="false" data-accordion-target="#card1">
                                         <p class="mr-2">Нийтлэг үндэслэл</p>
                                         <svg class="w-4 h-4 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 8">
                                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 5.326 5.7a.909.909 0 0 0 1.348 0L13 1"/>
@@ -164,7 +183,7 @@
     
                                 <!-- Accordion Card 2 -->
                                 <div>
-                                    <button class="w-full text-lg font-semibold bg-primary_ld text-white p-3 rounded-md text-left flex justify-between items-center" aria-expanded="false" data-accordion-target="#card2">
+                                    <button class="accord-btn" aria-expanded="false" data-accordion-target="#card2">
                                         <p class="mr-2">НЭР ТОМЪЁОНЫ ТАЙЛБАР</p>
                                         <svg class="w-4 h-4 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 8">
                                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 5.326 5.7a.909.909 0 0 0 1.348 0L13 1"/>
@@ -186,7 +205,7 @@
     
                                 <!-- Accordion Card 3 -->
                                 <div>
-                                    <button class="w-full text-lg font-semibold bg-primary_ld text-white p-3 rounded-md text-left flex justify-between items-center" aria-expanded="false" data-accordion-target="#card3">
+                                    <button class="accord-btn" aria-expanded="false" data-accordion-target="#card3">
                                         <p class="mr-2">ДААТГАЛЫН ЗҮЙЛ</p>
                                         <svg class="w-4 h-4 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 8">
                                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 5.326 5.7a.909.909 0 0 0 1.348 0L13 1"/>
@@ -202,7 +221,7 @@
     
                                 <!-- Accordion Card 4 -->
                                 <div>
-                                    <button class="w-full text-lg font-semibold bg-primary_ld text-white p-3 rounded-md text-left flex justify-between items-center" aria-expanded="false" data-accordion-target="#card4">
+                                    <button class="accord-btn" aria-expanded="false" data-accordion-target="#card4">
                                         <p class="mr-2">ДААТГАЛЫН ЭРСДЭЛ</p>
                                         <svg class="w-4 h-4 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 8">
                                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 5.326 5.7a.909.909 0 0 0 1.348 0L13 1"/>
@@ -215,7 +234,7 @@
     
                                 <!-- Accordion Card 5 -->
                                 <div>
-                                    <button class="w-full text-lg font-semibold bg-primary_ld text-white p-3 rounded-md text-left flex justify-between items-center" aria-expanded="false" data-accordion-target="#card5">
+                                    <button class="accord-btn" aria-expanded="false" data-accordion-target="#card5">
                                         <p class="mr-2">ДААТГАЛЫН ҮНЭЛГЭЭ, ДААТГАЛЫН ХУРААМЖ</p>
                                         <svg class="w-4 h-4 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 8">
                                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 5.326 5.7a.909.909 0 0 0 1.348 0L13 1"/>
@@ -235,7 +254,7 @@
     
                                 <!-- Accordion Card 6 -->
                                 <div>
-                                    <button class="w-full text-lg font-semibold bg-primary_ld text-white p-3 rounded-md text-left flex justify-between items-center" aria-expanded="false" data-accordion-target="#card6">
+                                    <button class="accord-btn" aria-expanded="false" data-accordion-target="#card6">
                                         <p class="mr-2">ДААТГАЛЫН ГЭРЭЭНИЙ ХУГАЦАА</p>
                                         <svg class="w-4 h-4 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 8">
                                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 5.326 5.7a.909.909 0 0 0 1.348 0L13 1"/>
@@ -253,7 +272,7 @@
                                 </div>
                                 {{-- accordion 7 --}}
                                 <div>
-                                    <button class="w-full text-lg font-semibold bg-primary_ld text-white p-3 rounded-md text-left flex justify-between items-center" aria-expanded="false" data-accordion-target="#card7">
+                                    <button class="accord-btn" aria-expanded="false" data-accordion-target="#card7">
                                         <p class="mr-2">ДААТГАГЧИЙН ЭРХ, ҮҮРЭГ</p>
                                         <svg class="w-4 h-4 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 8">
                                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 5.326 5.7a.909.909 0 0 0 1.348 0L13 1"/>
@@ -271,7 +290,7 @@
                                 </div>
                                 {{-- accord 8 --}}
                                 <div>
-                                    <button class="w-full text-lg font-semibold bg-primary_ld text-white p-3 rounded-md text-left flex justify-between items-center" aria-expanded="false" data-accordion-target="#card8">
+                                    <button class="accord-btn" aria-expanded="false" data-accordion-target="#card8">
                                         <p class="mr-2">ДААТГУУЛАГЧИЙН ЭРХ, ҮҮРЭГ</p>
                                         <svg class="w-4 h-4 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 8">
                                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 5.326 5.7a.909.909 0 0 0 1.348 0L13 1"/>
@@ -289,26 +308,8 @@
                                 </div>
                                 {{-- accord 9 --}}
                                 <div>
-                                    <button class="w-full text-lg font-semibold bg-primary_ld text-white p-3 rounded-md text-left flex justify-between items-center" aria-expanded="false" data-accordion-target="#card9">
+                                    <button class="accord-btn" aria-expanded="false" data-accordion-target="#card9">
                                         <p class="mr-2">ДААТГАГЧИЙН ЭРХ, ҮҮРЭГ</p>
-                                        <svg class="w-4 h-4 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 8">
-                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 5.326 5.7a.909.909 0 0 0 1.348 0L13 1"/>
-                                        </svg>
-                                    </button>
-                                    <div id="card8" class="hidden bg-white p-4 shadow-md rounded-lg">
-                                        <p class="text-gray-600 mt-4">
-                                            Даатгуулагч санаатайгаар хохирол учруулсан буюу даатгалын тохиолдол бий болох
-                                            нөхцөл, орчныг бүрдүүлсэн; Даатгуулагч даатгалын зүйлийн талаар даатгагчид худал
-                                            мэдээлсэн, хуурамч бичиг баримт бүрдүүлсэн нь тогтоогдсон; Гарсан хохирлыг
-                                            даатгуулагч буруутай этгээдээр нөхөн төлүүлсэн; Даатгалын гэрээнд заагдаагүй нөхцөл,
-                                            эрсдэлийн улмаас гарсан хохирол; Хууль тогтоомжид заасан бусад үндэслэл;
-                                        </p>
-                                    </div>
-                                </div>
-                                {{-- accord 9 --}}
-                                <div>
-                                    <button class="w-full text-lg font-semibold bg-primary_ld text-white p-3 rounded-md text-left flex justify-between items-center" aria-expanded="false" data-accordion-target="#card9">
-                                        <p class="mr-2">НӨХӨН ТӨЛБӨР</p>
                                         <svg class="w-4 h-4 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 8">
                                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 5.326 5.7a.909.909 0 0 0 1.348 0L13 1"/>
                                         </svg>
@@ -325,8 +326,8 @@
                                 </div>
                                 {{-- accord 10 --}}
                                 <div>
-                                    <button class="w-full text-lg font-semibold bg-primary_ld text-white p-3 rounded-md text-left flex justify-between items-center" aria-expanded="false" data-accordion-target="#card10">
-                                        <p class="mr-2">ХАМРАГДАХГҮЙ НӨХЦӨЛҮҮД</p>
+                                    <button class="accord-btn" aria-expanded="false" data-accordion-target="#card10">
+                                        <p class="mr-2">НӨХӨН ТӨЛБӨР</p>
                                         <svg class="w-4 h-4 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 8">
                                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 5.326 5.7a.909.909 0 0 0 1.348 0L13 1"/>
                                         </svg>
@@ -343,8 +344,8 @@
                                 </div>
                                 {{-- accord 11 --}}
                                 <div>
-                                    <button class="w-full text-lg font-semibold bg-primary_ld text-white p-3 rounded-md text-left flex justify-between items-center" aria-expanded="false" data-accordion-target="#card11">
-                                        <p class="mr-2">БУСАД</p>
+                                    <button class="accord-btn" aria-expanded="false" data-accordion-target="#card11">
+                                        <p class="mr-2">ХАМРАГДАХГҮЙ НӨХЦӨЛҮҮД</p>
                                         <svg class="w-4 h-4 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 8">
                                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 5.326 5.7a.909.909 0 0 0 1.348 0L13 1"/>
                                         </svg>
@@ -361,13 +362,31 @@
                                 </div>
                                 {{-- accord 12 --}}
                                 <div>
-                                    <button class="w-full text-lg font-semibold bg-primary_ld text-white p-3 rounded-md text-left flex justify-between items-center" aria-expanded="false" data-accordion-target="#card12">
-                                        <p class="mr-2">Гэрээг харах</p>
+                                    <button class="accord-btn" aria-expanded="false" data-accordion-target="#card12">
+                                        <p class="mr-2">БУСАД</p>
                                         <svg class="w-4 h-4 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 8">
                                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 5.326 5.7a.909.909 0 0 0 1.348 0L13 1"/>
                                         </svg>
                                     </button>
                                     <div id="card12" class="hidden bg-white p-4 shadow-md rounded-lg">
+                                        <p class="text-gray-600 mt-4">
+                                            Даатгуулагч санаатайгаар хохирол учруулсан буюу даатгалын тохиолдол бий болох
+                                            нөхцөл, орчныг бүрдүүлсэн; Даатгуулагч даатгалын зүйлийн талаар даатгагчид худал
+                                            мэдээлсэн, хуурамч бичиг баримт бүрдүүлсэн нь тогтоогдсон; Гарсан хохирлыг
+                                            даатгуулагч буруутай этгээдээр нөхөн төлүүлсэн; Даатгалын гэрээнд заагдаагүй нөхцөл,
+                                            эрсдэлийн улмаас гарсан хохирол; Хууль тогтоомжид заасан бусад үндэслэл;
+                                        </p>
+                                    </div>
+                                </div>
+                                {{-- accord 13 --}}
+                                <div>
+                                    <button class="accord-btn" aria-expanded="false" data-accordion-target="#card13">
+                                        <p class="mr-2">Гэрээг харах</p>
+                                        <svg class="w-4 h-4 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 8">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 5.326 5.7a.909.909 0 0 0 1.348 0L13 1"/>
+                                        </svg>
+                                    </button>
+                                    <div id="card13" class="hidden bg-white p-4 shadow-md rounded-lg">
                                         <img src="/insurance_img1.png" alt="Example Image" class="w-full rounded-lg">
                                         <img src="/insurance_img2.png" alt="Example Image" class="w-full rounded-lg">
                                     </div>
@@ -376,8 +395,7 @@
                         </div>
                         <!-- Modal footer -->
                         <div class="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600">
-                            <button data-modal-hide="default-modal" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">I accept</button>
-                            <button data-modal-hide="default-modal" type="button" class="py-2.5 px-5 ms-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Decline</button>
+                            <button data-modal-hide="default-modal" type="button" class="btn-primary">Хаах</button>
                         </div>
                     </div>
                 </div>
@@ -393,15 +411,17 @@
 </x-main-layout>
 
 <script>
+    // Toggle modal visibility when button with data-modal-toggle is clicked
     document.querySelectorAll('[data-modal-toggle]').forEach(button => {
         button.addEventListener('click', () => {
             const modalId = button.getAttribute('data-modal-target');
             const modal = document.getElementById(modalId);
             modal.classList.toggle('hidden');
-            modal.classList.toggle('flex'); 
+            modal.classList.toggle('flex');
         });
     });
 
+    // Close modal when button with data-modal-hide is clicked
     document.querySelectorAll('[data-modal-hide]').forEach(button => {
         button.addEventListener('click', () => {
             const modal = button.closest('.fixed');
@@ -409,20 +429,32 @@
             modal.classList.remove('flex');
         });
     });
+
+    // Close modal when clicking outside the modal content (on the backdrop)
+    document.addEventListener('click', (event) => {
+        // Check if the click was on the backdrop (outside the modal content)
+        if (event.target.classList.contains('fixed') && !event.target.closest('.modal-content')) {
+            const modal = event.target;
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+    });
+
+    // Accordion functionality
     document.addEventListener("DOMContentLoaded", () => {
-    const accordionButtons = document.querySelectorAll('[data-accordion-target]');
-    
-    accordionButtons.forEach((button) => {
-        button.addEventListener("click", () => {
-            const targetId = button.getAttribute("data-accordion-target");
-            const targetElement = document.querySelector(targetId);
-            
-            const isExpanded = button.getAttribute("aria-expanded") === "true";
-            
-            // Toggle visibility
-            button.setAttribute("aria-expanded", !isExpanded);
-            targetElement.classList.toggle("hidden");
+        const accordionButtons = document.querySelectorAll('[data-accordion-target]');
+        
+        accordionButtons.forEach((button) => {
+            button.addEventListener("click", () => {
+                const targetId = button.getAttribute("data-accordion-target");
+                const targetElement = document.querySelector(targetId);
+                
+                const isExpanded = button.getAttribute("aria-expanded") === "true";
+                
+                // Toggle visibility
+                button.setAttribute("aria-expanded", !isExpanded);
+                targetElement.classList.toggle("hidden");
+            });
         });
     });
-});
 </script>
