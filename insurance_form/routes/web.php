@@ -10,6 +10,8 @@ Route::get('/', function () {
 
 Route::get('/daatgal/form', [PageController::class, 'daatgal_form'])->name('daatgal.form');
 Route::get('/daatgal/next', [PageController::class, 'daatgal_next'])->name('daatgal.next');
+Route::get('/daatgal/next2', [PageController::class, 'daatgal_next'])->name('daatgal.next2');
+
 
 
 Route::get('/dashboard', function () {

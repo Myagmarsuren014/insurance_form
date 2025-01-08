@@ -59,3 +59,10 @@
 .table-header {
     @apply rounded bg-[#252A47]  text-lg font-semibold text-white shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 w-full;
 }
+
+/* app.css */
+.radio-label {
+    @apply inline-flex items-center justify-between w-full p-5 text-gray-400  border border-gray-200 rounded-lg cursor-pointer peer-checked:border-white peer-checked:text-green-600 peer-checked:bg-white peer-checked:shadow-sm peer-checked:font-bold hover:text-white bg-gray-800 hover:bg-gray-700;
+}
+
+
