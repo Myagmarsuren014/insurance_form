@@ -135,7 +135,7 @@
                         </div>
                     </div>
                     <div class="flex justify-center w-50% mt-50">
-                        <a href="{{ route('daatgal.next') }}" class="btn-submit mt-50">даатгал үүсгэх</a>
+                        <a href="{{ route('daatgal.next') }}" class="btn-primary mt-50">даатгал үүсгэх</a>
                     </div>
                 </div>
             </div>
