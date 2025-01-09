@@ -80,52 +80,47 @@
                             <li class="shadow-lg">
                                 <input type="radio" id="hosting-small" name="hosting" value="hosting-small"
                                     class="hidden peer" required />
-                                <label for="hosting-small"
-                                    class="radio-label">
+                                <label for="hosting-small" class="radio-label">
                                     <div class="block">
                                         <div class="w-full text-lg font-semibold">10,000,000 ₮</div>
                                         <div class="w-full">Хураамж 50,000 ₮</div>
                                     </div>
-                                    <svg class="w-5 h-5 ms-3 rtl:rotate-180" aria-hidden="true"
-                                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16">
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                            stroke-width="2" d="M2 8l4 4L14 2" />
+                                    <svg class="w-5 h-5 ms-3 rtl:rotate-180 opacity-0 peer-checked:opacity-100 transition-opacity"
+                                        aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" id="option-1">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2 8l4 4L14 2" />
                                     </svg>
                                 </label>
                             </li>
                             <li class="shadow-lg">
                                 <input type="radio" id="hosting-big" name="hosting" value="hosting-big"
-                                    class="hidden peer">
-                                <label for="hosting-big"
-                                    class="radio-label">
-                                <div class="block">
+                                    class="hidden peer" />
+                                <label for="hosting-big" class="radio-label">
+                                    <div class="block">
                                         <div class="w-full text-lg font-semibold">20,000,000 ₮</div>
                                         <div class="w-full">Хураамж 90,000 ₮</div>
                                     </div>
-                                    <svg class="w-5 h-5 ms-3 rtl:rotate-180" aria-hidden="true"
-                                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16">
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                            stroke-width="2" d="M2 8l4 4L14 2" />
+                                    <svg class="w-5 h-5 ms-3 rtl:rotate-180 opacity-0 peer-checked:opacity-100 transition-opacity"
+                                        aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" id="option-2">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2 8l4 4L14 2" />
                                     </svg>
                                 </label>
                             </li>
                             <li class="shadow-lg">
                                 <input type="radio" id="hosting-large" name="hosting" value="hosting-large"
-                                    class="hidden peer">
-                                <label for="hosting-large"
-                                    class="radio-label">
-                                <div class="block">
+                                    class="hidden peer" />
+                                <label for="hosting-large" class="radio-label">
+                                    <div class="block">
                                         <div class="w-full text-lg font-semibold">40,000,000 ₮</div>
                                         <div class="w-full">Хураамж 160,000 ₮</div>
                                     </div>
-                                    <svg class="w-5 h-5 ms-3 rtl:rotate-180" aria-hidden="true"
-                                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16">
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                            stroke-width="2" d="M2 8l4 4L14 2" />
+                                    <svg class="w-5 h-5 ms-3 rtl:rotate-180 opacity-0 peer-checked:opacity-100 transition-opacity"
+                                        aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" id="option-3">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2 8l4 4L14 2" />
                                     </svg>
                                 </label>
                             </li>
                         </ul>
+                        
 
                         {{-- Popup modal call--}}
                         <div class="flex justify-center items-center my-8">
@@ -271,7 +266,6 @@
             </div>
 
             {{-- Popup for warning --}}
-
             <div id="alert-modal" tabindex="-1" aria-hidden="true" 
                 class="hidden overflow-y-auto overflow-x-hidden 
                 fixed top-0 right-0 left-0 z-50 justify-center items-center 
@@ -379,4 +373,25 @@
             });
         });
     });
+
+    // Get all the radio buttons and SVGs
+const radios = document.querySelectorAll('input[type="radio"]');
+const svgs = document.querySelectorAll('svg');
+
+// Function to hide all SVGs
+function hideAllSVGs() {
+    svgs.forEach(svg => {
+        svg.style.opacity = '0'; // Hide all SVGs
+    });
+}
+
+// Add event listeners to each radio button
+radios.forEach(radio => {
+    radio.addEventListener('change', () => {
+        hideAllSVGs(); // Hide all SVGs before showing the one related to the checked radio button
+        const relatedSvg = document.querySelector(`#${radio.id} + label svg`);
+        relatedSvg.style.opacity = '1'; // Show the SVG of the checked radio button
+    });
+});
+
 </script>

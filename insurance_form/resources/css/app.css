@@ -67,7 +67,6 @@
     hover:text-white hover:bg-blue-400 hover:duration-300;
 }
 
-
 .accord-btn {
     @apply w-full text-lg font-semibold bg-primary_ld text-white p-3 rounded-md text-left flex justify-between items-center;
 }

@@ -25,7 +25,7 @@
                                         <span class="font-semibold text-gray-800">Дуусах огноо:</span> 2026-01-08
                                     </p>
                                 </div>
-                                <div class="mt-6 flex flex-col items-start space-y-4">
+                                <div class="mt-6 flex flex-col items-center space-y-4">
                                     <button class="btn-primary py-2 px-4 text-sm w-1/2">
                                         <a href="{{ route('daatgal.qpay') }}"> QPay ээр
                                             төлөх</a>
@@ -58,14 +58,6 @@
 
                         </div>
                     </div>
-
-
-
-
-
-                    {{-- <div class="flex justify-center w-50% mt-50">
-                        <a href="{{ route('daatgal.purchase') }}" class="btn-primary mt-50">даатгал үүсгэх</a>
-                    </div> --}}
                 </div>
 
             </div>
