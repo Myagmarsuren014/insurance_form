@@ -70,7 +70,6 @@
                                 <input type="text" name="last_name"
                                     class="filament-forms-input block w-full rounded-lg shadow-sm outline-none transition duration-75 focus:ring-1 focus:ring-inset disabled:opacity-70 border-gray-300 focus:border-primary-500 focus:ring-primary-500"
                                     placeholder=" " required />
-
                             </div>
                         </form>
 
@@ -128,7 +127,7 @@
                             </li>
                         </ul>
 
-                        {{-- Popup modal --}}
+                        {{-- Popup modal call--}}
                         <div class="flex justify-center items-center my-8">
                             <button data-modal-target="default-modal" data-modal-toggle="default-modal"
                                 class="btn-primary flex justify-center" type="button">
@@ -138,17 +137,21 @@
 
                         {{-- Баталгаажуулалт --}}
                         <div class="flex items-center justify-center my-8">
-                            <input id="agree-checkbox" type="checkbox"
-                                class="w-4 h-4 bg-white border-2 border-gray-300 rounded focus:outline-none checked:bg-green-500 checked:border-green-500">
+                            <input id="agree-checkbox" type="checkbox" 
+                                   class="w-4 h-4 bg-white border-2 border-gray-300 
+                                   rounded focus:outline-none checked:bg-green-500
+                                   checked:border-green-500">
                             <label for="agree-checkbox" class="ml-2 text-sm font-medium text-gray-900">Гэрээтэй уншиж танилцсан</label>
                         </div>
+                        
                         <div class="flex items-center justify-center">
                             <a id="payButton" href="{{ route('daatgal.purchase') }}" class="btn-primary mt-50">Төлөх</a>
                         </div>
-                        
                     </div>
                 </div>
-            </div>
+            </div>       
+            
+            
 
             {{-- Popup Modal --}}
             <div id="default-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full backdrop-blur-sm">
@@ -267,6 +270,40 @@
                 </div>
             </div>
 
+            {{-- Popup for warning --}}
+
+            <div id="alert-modal" tabindex="-1" aria-hidden="true" 
+                class="hidden overflow-y-auto overflow-x-hidden 
+                fixed top-0 right-0 left-0 z-50 justify-center items-center 
+                w-full md:inset-0 max-h-full 
+                backdrop-blur-sm">
+                <div class="relative p-4 w-full max-w-4xl max-h-full">
+                    <!-- Modal content -->
+                    <div class="relative rounded-sm bg-white">
+                        <!-- Modal header -->
+                        <div class="flex items-center justify-between p-4 md:p-5  rounded-t">
+                            <button type="button" class="text-gray-400 bg-transparent  hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="default-modal" id="close-modal-btn">
+                                <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                                </svg>
+                                <span class="sr-only">Close modal</span>
+                            </button>
+                        </div>
+                        <!-- Modal body -->
+                        <div class="p-4 md:p-5 space-y-4">
+                            <div class="p-4 text-sm text-red-800 rounded-lg text-bold"">
+                                <p class="text-red-600 font-bold text-2xl text-center">Гэрээтэй уншиж танилцсанаа баталгаажуулна уу!!</p>
+                            </div>                        
+                        </div>
+                        <!-- Modal footer -->
+                        <div class="flex items-center p-4 md:p-5 rounded-b">
+                            <button id="close-modal" type="button" class="btn-primary">Хаах</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
             <div class="sm:col-span-1 ">
                 <div class="pt-4 pb-6 px-4 bg-gray-50 rounded-md ">
                     sidebar
@@ -305,6 +342,26 @@
             modal.classList.remove('flex');
         }
     });
+    //alert if not agreed
+    const payButton = document.getElementById('payButton');
+    const checkbox = document.getElementById('agree-checkbox');
+    const modal = document.getElementById('alert-modal');
+    const closeModalBtns = document.querySelectorAll('#close-modal, #close-modal-btn');
+
+    payButton.addEventListener('click', function (event) {
+        if (!checkbox.checked) {
+            event.preventDefault();  // Prevent the link from navigating
+            modal.classList.remove('hidden');  // Show the modal
+            modal.classList.add('flex');
+        }
+    });
+
+    closeModalBtns.forEach(button => {
+        button.addEventListener('click', function () {
+            modal.classList.add('hidden');  // Hide the modal
+        });
+    });
+
     // Accordion functionality
     document.addEventListener("DOMContentLoaded", () => {
         const accordionButtons = document.querySelectorAll('[data-accordion-target]');
