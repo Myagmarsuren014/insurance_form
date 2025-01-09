@@ -138,13 +138,12 @@
 
                         {{-- Баталгаажуулалт --}}
                         <div class="flex items-center justify-center my-8">
-                            <input id="checked-checkbox" type="checkbox" value=""
+                            <input id="agree-checkbox" type="checkbox"
                                 class="w-4 h-4 bg-white border-2 border-gray-300 rounded focus:outline-none checked:bg-green-500 checked:border-green-500">
-                            <label for="checked-checkbox" class="ml-2 text-sm font-medium text-gray-900">Гэрээтэй
-                                уншиж танилцсан</label>
+                            <label for="agree-checkbox" class="ml-2 text-sm font-medium text-gray-900">Гэрээтэй уншиж танилцсан</label>
                         </div>
                         <div class="flex items-center justify-center">
-                            <button class="btn-primary">Төлөх</button>
+                            <a id="payButton" href="{{ route('daatgal.purchase') }}" class="btn-primary mt-50">Төлөх</a>
                         </div>
                         
                     </div>
@@ -306,7 +305,6 @@
             modal.classList.remove('flex');
         }
     });
-
     // Accordion functionality
     document.addEventListener("DOMContentLoaded", () => {
         const accordionButtons = document.querySelectorAll('[data-accordion-target]');
