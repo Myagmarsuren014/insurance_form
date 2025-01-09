@@ -16,6 +16,8 @@ export default {
         extend: {
             fontFamily: {
                 sans: ["Figtree", ...defaultTheme.fontFamily.sans],
+
+                title: ["Open-sans", "sans-serif"],
             },
             colors: {
                 danger: colors.rose,
