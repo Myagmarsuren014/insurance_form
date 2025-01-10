@@ -29,7 +29,7 @@
                                 <h2 class="text-lg font-semibold text-gray-800">Description</h2>
                                 <p class="text-gray-600">This is the description text. Add more details here.</p>
                                 <a 
-                                    class="inline-flex items-center text-gray-600 gap-2 font-bold hover:text-red-600 transition duration-200 ease-in group" 
+                                    class="my-3 inline-flex items-center text-gray-600 gap-2 font-bold hover:text-red-600 transition duration-200 ease-in group" 
                                     href="/daatgal/form">
                                     Даатгуулах   
                                 </a>
@@ -46,7 +46,7 @@
                             <div class="text-center sm:text-left">
                                 <h2 class="text-lg font-semibold text-gray-800">Description</h2>
                                 <p class="text-gray-600">This is the description text. Add more details here.</p>
-                                <a class="text-gray-600 font-bold hover:text-red-600 hover:ease-in transition duration-200" 
+                                <a class="my-3  inline-flex text-gray-600 font-bold hover:text-red-600 hover:ease-in transition duration-200" 
                                 href="/daatgal/form">Даатгуулах</a>
                             </div>
                         </div>
@@ -61,7 +61,7 @@
                             <div class="text-center sm:text-left">
                                 <h2 class="text-lg font-semibold text-gray-800">Description</h2>
                                 <p class="text-gray-600">This is the description text. Add more details here.</p>
-                                <a class="text-gray-600 font-bold hover:text-red-600 hover:ease-in transition duration-200" 
+                                <a class="my-3  inline-flex text-gray-600 font-bold hover:text-red-600 hover:ease-in transition duration-200" 
                                 href="/daatgal/form">Даатгуулах</a>
                             </div>
                         </div>
@@ -76,7 +76,7 @@
                             <div class="text-center sm:text-left">
                                 <h2 class="text-lg font-semibold text-gray-800">Description</h2>
                                 <p class="text-gray-600">This is the description text. Add more details here.</p>
-                                <a class="text-gray-600 font-bold hover:text-red-600 hover:ease-in transition duration-200" 
+                                <a class="my-3  inline-flex text-gray-600 font-bold hover:text-red-600 hover:ease-in transition duration-200" 
                                 href="/daatgal/form">Даатгуулах</a>
                             </div>
                         </div>
