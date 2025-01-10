@@ -69,11 +69,7 @@
     peer-checked:text-white shadow-sm peer-checked:bg-blue-500 bg-white
     hover:text-white hover:bg-blue-400 hover:duration-300;
 }
-<<<<<<< HEAD
-=======
 
 .accord-btn {
     @apply w-full text-lg font-semibold bg-primary_ld text-white p-3 rounded-md text-left flex justify-between items-center;
 }
-
->>>>>>> 919cfe965014b8baf4e1f9258c44b38c29b7cec9

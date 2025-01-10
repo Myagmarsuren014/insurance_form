@@ -25,15 +25,9 @@
                                         <span class="font-semibold text-gray-800">Дуусах огноо:</span> 2026-01-08
                                     </p>
                                 </div>
-<<<<<<< HEAD
-                                <div class="mt-6 flex flex-col items-start space-y-4">
-                                    <button class="btn-primary py-2 px-4 text-sm w-1/2">
-                                        <a href="{{ route('daatgal.qpay') }}">QPay ээр
-=======
                                 <div class="mt-6 flex flex-col items-center space-y-4">
                                     <button class="btn-primary py-2 px-4 text-sm w-1/2">
                                         <a href="{{ route('daatgal.qpay') }}"> QPay ээр
->>>>>>> 919cfe965014b8baf4e1f9258c44b38c29b7cec9
                                             төлөх</a>
                                     </button>
                                     <button class="btn-primary py-2 px-4 text-sm w-1/2">
@@ -42,15 +36,6 @@
 
                                     </button>
                                     <button class="btn-primary py-2 px-4 text-sm w-1/2">
-<<<<<<< HEAD
-                                        <a href="{{ route('daatgal.qpay') }}"> Storeray хувааж
-                                            төлөх</a>
-
-                                    </button>
-                                </div>
-
-
-=======
                                         <a href="{{ route('daatgal.qpay') }}">
                                             Storeray хувааж төлөх
                                         </a>
@@ -68,23 +53,11 @@
                                         үйлчилгээнд багтах зүйлс
                                     </p>
                                 </div>
->>>>>>> 919cfe965014b8baf4e1f9258c44b38c29b7cec9
                             </div>
 
 
                         </div>
                     </div>
-<<<<<<< HEAD
-
-
-
-
-
-                    {{-- <div class="flex justify-center w-50% mt-50">
-                        <a href="{{ route('daatgal.purchase') }}" class="btn-primary mt-50">даатгал үүсгэх</a>
-                    </div> --}}
-=======
->>>>>>> 919cfe965014b8baf4e1f9258c44b38c29b7cec9
                 </div>
 
             </div>

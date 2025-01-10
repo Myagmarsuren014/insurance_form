@@ -27,6 +27,10 @@ class PageController extends Controller
     {
         return view('pages.daatgal.verified');
     }
+    public function daatgal_option(Request $request)
+    {
+        return view('pages.daatgal.option');
+    }
     public function admin_table(Request $request)  {
         return view('pages.admin.table');
     }

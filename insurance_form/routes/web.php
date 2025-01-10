@@ -16,6 +16,8 @@ Route::prefix('/daatgal')->group(function () {
     Route::get('/purchase', [PageController::class, 'daatgal_purchase'])->name('daatgal.purchase');
     Route::get('/qpay', [PageController::class, 'daatgal_qpay'])->name('daatgal.qpay');
     Route::get('/verified', [PageController::class, 'daatgal_verified'])->name('daatgal.verified');
+Route::get('/daatgal/option', [PageController::class, 'daatgal_option'])->name('daatgal.option');
+
 
 });
 
