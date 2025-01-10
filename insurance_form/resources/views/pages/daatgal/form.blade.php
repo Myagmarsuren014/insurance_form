@@ -6,8 +6,8 @@
                     <div>
                         <div class="flex flex-col items-center text-center space-y-4 p-6 rounded-lg">
                             <!-- Logo -->
-                            <div class="relative">
-                                <img class="w-50 h-20" src="/migDaatgal.png" alt="Өмгөөлөгчийн Хариуцлагын Даатгал">
+                            <div class="flex w-1/2 h-auto mx-auto my-8 items-center justify-center">
+                                <img src="/migDaatgal.png" alt="migDaatgalLogo">
                             </div>
                             <!-- Title -->
                             <p class="text-2xl font-bold">
