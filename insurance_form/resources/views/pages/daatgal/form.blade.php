@@ -19,11 +19,11 @@
                             </p>
                             <div class="w-full h-3x bg-white my-4"></div>
                         </div>
-
-                        <div class="space-y-4 p-4">
+                        
+                        <div class="space-y-4 p-4 ">
                             <!-- Accordion Card 1 -->
                             <div>
-                                <button class="w-full text-lg font-semibold bg-primary_ld text-white p-3 rounded-md text-left flex justify-between items-center" aria-expanded="false" data-accordion-target="#card1">
+                                <button class="accord-btn" aria-expanded="false" data-accordion-target="#card1">
                                     <p class="mr-2">Даатгалын зүйлл</p>
                                     <svg class="w-4 h-4 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 8">
                                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 5.326 5.7a.909.909 0 0 0 1.348 0L13 1"/>
@@ -45,7 +45,7 @@
 
                             <!-- Accordion Card 2 -->
                             <div>
-                                <button class="w-full text-lg font-semibold bg-primary_ld text-white p-3 rounded-md text-left flex justify-between items-center" aria-expanded="false" data-accordion-target="#card2">
+                                <button class="accord-btn" aria-expanded="false" data-accordion-target="#card2">
                                     <p class="mr-2">Даатгалын үндсэн эрсдэл</p>
                                     <svg class="w-4 h-4 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 8">
                                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 5.326 5.7a.909.909 0 0 0 1.348 0L13 1"/>
@@ -67,7 +67,7 @@
 
                             <!-- Accordion Card 3 -->
                             <div>
-                                <button class="w-full text-lg font-semibold bg-primary_ld text-white p-3 rounded-md text-left flex justify-between items-center" aria-expanded="false" data-accordion-target="#card3">
+                                <button class="accord-btn" aria-expanded="false" data-accordion-target="#card3">
                                     <p class="mr-2">Даатгалын үнэлгээ</p>
                                     <svg class="w-4 h-4 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 8">
                                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 5.326 5.7a.909.909 0 0 0 1.348 0L13 1"/>
@@ -83,7 +83,7 @@
 
                             <!-- Accordion Card 4 -->
                             <div>
-                                <button class="w-full text-lg font-semibold bg-primary_ld text-white p-3 rounded-md text-left flex justify-between items-center" aria-expanded="false" data-accordion-target="#card4">
+                                <button class="accord-btn" aria-expanded="false" data-accordion-target="#card4">
                                     <p class="mr-2">Даатгалын хураамж</p>
                                     <svg class="w-4 h-4 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 8">
                                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 5.326 5.7a.909.909 0 0 0 1.348 0L13 1"/>
@@ -96,7 +96,7 @@
 
                             <!-- Accordion Card 5 -->
                             <div>
-                                <button class="w-full text-lg font-semibold bg-primary_ld text-white p-3 rounded-md text-left flex justify-between items-center" aria-expanded="false" data-accordion-target="#card5">
+                                <button class="accord-btn" aria-expanded="false" data-accordion-target="#card5">
                                     <p class="mr-2">Нөхөн төлбөр олгох нөхцөл</p>
                                     <svg class="w-4 h-4 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 8">
                                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 5.326 5.7a.909.909 0 0 0 1.348 0L13 1"/>
@@ -116,7 +116,7 @@
 
                             <!-- Accordion Card 6 -->
                             <div>
-                                <button class="w-full text-lg font-semibold bg-primary_ld text-white p-3 rounded-md text-left flex justify-between items-center" aria-expanded="false" data-accordion-target="#card6">
+                                <button class="accord-btn" aria-expanded="false" data-accordion-target="#card6">
                                     <p class="mr-2">Нөхөн төлбөр олгохгүй нөхцөл</p>
                                     <svg class="w-4 h-4 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 8">
                                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 5.326 5.7a.909.909 0 0 0 1.348 0L13 1"/>
@@ -135,7 +135,7 @@
                         </div>
                     </div>
                     <div class="flex justify-center w-50% mt-50">
-                        <a href="{{ route('daatgal.next') }}" class="btn-submit mt-50">даатгал үүсгэх</a>
+                        <a href="{{ route('daatgal.next') }}" class="btn-primary mt-50">даатгал үүсгэх</a>
                     </div>
                 </div>
             </div>
@@ -152,18 +152,17 @@
     document.addEventListener("DOMContentLoaded", () => {
     const accordionButtons = document.querySelectorAll('[data-accordion-target]');
     
-    accordionButtons.forEach((button) => {
-        button.addEventListener("click", () => {
-            const targetId = button.getAttribute("data-accordion-target");
-            const targetElement = document.querySelector(targetId);
-            
-            const isExpanded = button.getAttribute("aria-expanded") === "true";
-            
-            // Toggle visibility
-            button.setAttribute("aria-expanded", !isExpanded);
-            targetElement.classList.toggle("hidden");
+        accordionButtons.forEach((button) => {
+            button.addEventListener("click", () => {
+                const targetId = button.getAttribute("data-accordion-target");
+                const targetElement = document.querySelector(targetId);
+                
+                const isExpanded = button.getAttribute("aria-expanded") === "true";
+                
+                button.setAttribute("aria-expanded", !isExpanded);
+                targetElement.classList.toggle("hidden");
+            });
         });
     });
-});
 
 </script>

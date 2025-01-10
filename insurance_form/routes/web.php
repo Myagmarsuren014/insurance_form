@@ -8,6 +8,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+<<<<<<< HEAD
 // Grouping daatgal routes for better organization
 Route::prefix('/daatgal')->group(function () {
     Route::get('/form', [PageController::class, 'daatgal_form'])->name('daatgal.form');
@@ -17,6 +18,14 @@ Route::prefix('/daatgal')->group(function () {
     Route::get('/qpay', [PageController::class, 'daatgal_qpay'])->name('daatgal.qpay');
     Route::get('/verified', [PageController::class, 'daatgal_verified'])->name('daatgal.verified');
 
+=======
+Route::get('/daatgal/form', [PageController::class, 'daatgal_form'])->name('daatgal.form');
+Route::get('/daatgal/next', [PageController::class, 'daatgal_next'])->name('daatgal.next');
+Route::get('/daatgal/next2', [PageController::class, 'daatgal_next2'])->name('daatgal.next2');
+Route::get('/purchase', [PageController::class, 'daatgal_purchase'])->name('daatgal.purchase');
+Route::get('/qpay', [PageController::class, 'daatgal_qpay'])->name('daatgal.qpay');
+Route::get('/verified', [PageController::class, 'daatgal_verified'])->name('daatgal.verified');
+>>>>>>> 919cfe965014b8baf4e1f9258c44b38c29b7cec9
 
 
 });
