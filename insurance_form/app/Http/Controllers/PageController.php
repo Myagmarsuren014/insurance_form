@@ -15,15 +15,6 @@ class PageController extends Controller
     {
         return view('pages.daatgal.next');
     }
-<<<<<<< HEAD
-=======
-
-    public function daatgal_next2(Request $request)
-    {
-        return view('pages.daatgal.next2');
-    }
-    
->>>>>>> 919cfe965014b8baf4e1f9258c44b38c29b7cec9
     public function daatgal_purchase(Request $request)
     {
         return view('pages.daatgal.purchase');
@@ -35,5 +26,8 @@ class PageController extends Controller
     public function daatgal_verified (Request $request)
     {
         return view('pages.daatgal.verified');
+    }
+    public function admin_table(Request $request)  {
+        return view('pages.admin.table');
     }
 }
